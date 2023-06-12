@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            font-family: 'Marcellus';
+        }
+
+        body{
+            background-color: #223A4C;
+        }
+
+        @-webkit-keyframes rotating{
+            from {
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes rotating {
+            from {
+                -ms-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+                -o-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            to {
+                -ms-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+                -o-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        .rotating {
+            -webkit-animation: rotating 2s linear infinite;
+            -moz-animation: rotating 2s linear infinite;
+            -ms-animation: rotating 2s linear infinite;
+            -o-animation: rotating 2s linear infinite;
+            animation: rotating 2s linear infinite;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="yunael-min.css">
+    <title>Yunael Official - Home</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+</head>
+<body>
+    <div class="hero">
+        <div class="header-layout">
+            <div class="header-list">
+                <img class ="rotating" src="img/image 54 (Traced).png" onclick="headerclick()">
+                <nav id="mb">
+                    <div class="splitter" ></div>
+                    <div class="header-sublist" >
+                        <p class="fontsublist">HOME</p>
+                        <p class="fontsublist-jp">ニュース</p>
+                    </div>
+                    <div class="splitter"></div>
+                    <div class="header-sublist" >
+                        <p class="fontsublist">NEWS</p>
+                        <p class="fontsublist-jp">ニュース</p>
+                    </div>
+                    <div class="splitter" ></div>
+                    <div class="header-sublist" >
+                        <p class="fontsublist">RELEASES</p>
+                        <p class="fontsublist-jp">ニュース</p>
+                    </div>
+                    <div class="splitter" ></div>
+                    <div class="header-sublist" >
+                        <p class="fontsublist">GALLERY</p>
+                        <p class="fontsublist-jp">ギャラリー</p>
+                    </div>
+                    <div class="splitter" ></div>
+                    <div class="header-social" >
+                        <a href="https://www.tiktok.com/@yunaellll"><img class="ico-social" src="img/tiktok.png"></a>
+                        <a href="https://discord.com/"><img class="ico-social" src="img/discord.png"></a>
+                        <a href="https://www.instagram.com/yunnaell/"><img class="ico-social" src="img/instagram.png"></a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="hero-img"></div>
+    </div>
+
+    <div class="news-container" id="news-container">
+        <div class="news-title">
+            <p class="n-subtitle">ニュース</p>
+            <p class="n-title">NEWS</p>
+        </div>
+        <div id="addition-container">
+            <div class="news-card-container">
+                <img src="img/Group 12.png" width="250" height="354">
+                <img src="img/Group 12.png" width="250" height="354">
+                <img src="img/Group 12.png" width="250" height="354">
+                <img src="img/Group 12.png" width="250" height="354">
+            </div>
+        </div>
+        
+    </div>
+    <center><button class="readmore" onclick="addRow()" type="button"><p class="btn-font">Read More</p></button></center>
+
+    <div class="news-container">
+        <div class="news-title">
+            <p class="n-subtitle">ギャラリー</p>
+            <p class="n-title">GALLERY</p>
+        </div>
+        <div class="news-card-container">
+            <video width="640" height="480" controls autoplay loop muted>
+                <source src="vid/videosample.mp4" type="video/mp4">
+                <!-- <source src="movie.ogg" type="video/ogg">
+                Your browser does not support the video tag. -->
+            </video>
+        </div>
+        <center><button class="readmore"><p class="btn-font">Read More</p></button></center>
+    </div>
+</body>
+<script>
+    function addRow () {
+        document.querySelector('#addition-container').insertAdjacentHTML(
+        'afterbegin',
+        `<div class="news-card-container">
+                <img src="img/Group 12.png" width="250" height="354">
+                <img src="img/Group 12.png" width="250" height="354">
+                <img src="img/Group 12.png" width="250" height="354">
+                <img src="img/Group 12.png" width="250" height="354">
+        </div>`      
+        )
+    }
+
+    function headerclick(){
+        document.getElementById('mb').style.display = "block";
+        console.log('tes');
+    }
+</script>
+</html>
